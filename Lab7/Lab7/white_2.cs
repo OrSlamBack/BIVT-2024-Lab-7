@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Collections.Generic;
 using System.Linq;
@@ -95,11 +95,11 @@ namespace Lab_7
                     return (BestJump >= standard);
                 }
             }
-            public static void Disqualify(ref Participant[] participants)
+            public static Participant[] GetPassed(Participant[] participants)
             {
                 if (participants == null)
                 {
-                    return;
+                    return null;
                 }
                 int n = 0;
                 for (int i = 0; i < participants.Length; i++)
@@ -119,6 +119,7 @@ namespace Lab_7
                     }
                 }
                 participants = t;
+                return participants;
             }
         };
 
