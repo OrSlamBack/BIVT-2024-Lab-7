@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Collections.Generic;
 using System.Linq;
@@ -66,7 +66,7 @@ namespace Lab_7
             {
                 get
                 {
-                    if(matches== null || matches.Length == 0)
+                    if(matches==null)
                     {
                         return 0;
                     }
@@ -82,7 +82,7 @@ namespace Lab_7
             {
                 get
                 {
-                    if(matches == null || matches.Length==0)
+                    if(matches == null)
                     {
                         return 0;
                     }
@@ -100,6 +100,10 @@ namespace Lab_7
             }
             public virtual void PlayMatch(int goals, int misses)
             {
+                if(matches == null)
+                {
+                    matches = new Match[0];
+                }
                 Match[] t = matches;
                 matches = new Match[t.Length + 1];
                 for (int i = 0; i < t.Length; i++)
