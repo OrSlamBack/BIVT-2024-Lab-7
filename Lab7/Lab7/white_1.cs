@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,12 +22,19 @@ namespace Lab_7
             public double SecondJump { get { return secondJump; } }
 
             public double JumpSum { get { return (FirstJump + SecondJump); } }
+
+            private static double standard;
+            private static int jumpers;
+            private static int disqualified;
+            public static int Jumpers => jumpers;
+            public static int Disqualified => disqualified;
             public Participant(string _Surname, string _Club)
             {
                 surname = _Surname;
                 club = _Club;
                 firstJump = 0;
                 secondJump = 0;
+                jumpers++;
             }
             public void Jump(double result)
             {
@@ -74,11 +81,6 @@ namespace Lab_7
                 }
             }
 
-            private static double standard;
-            private static int jumpers;
-            private static int disqualified;
-            public static int Jumpers => jumpers;
-            public static int Disqualified => disqualified;
             static Participant()
             {
                 standard = 5.0; // норматив
