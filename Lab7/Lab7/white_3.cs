@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Xml.Linq;
 
 
 
@@ -71,17 +72,6 @@ namespace Lab_7
                 Marks = new double[0];
             }
 
-            public virtual void Print()
-            {
-                if (surname == null || name == null) return;
-                Console.Write(Name);
-                Console.Write(" ");
-                Console.Write(Surname);
-                Console.Write(" ");
-                Console.Write(AvgMark);
-                Console.Write(" ");
-                Console.WriteLine(Skipped);
-            }
             public static void SortBySkipped(Student[] array)
             {
                 if (array == null)
@@ -147,9 +137,16 @@ namespace Lab_7
                     }
                 }
             }
-            public override void Print()
+            public void Print()
             {
-                base.Print();
+                if (Surname == null || Name == null) return;
+                Console.Write(Name);
+                Console.Write(" ");
+                Console.Write(Surname);
+                Console.Write(" ");
+                Console.Write(AvgMark);
+                Console.Write(" ");
+                Console.WriteLine(Skipped);
             }
         }
     }
