@@ -26,10 +26,6 @@ namespace Lab_7
                 name = _Name;
             }
 
-            public virtual void Print()
-            {
-                Console.Write($"{Name} {Surname}");
-            }
         }
         public class Participant : Human
         {
@@ -39,7 +35,7 @@ namespace Lab_7
             {
                 count = 0;
             }
-            public Participant(string _Name, string _Surname) : base(_Name, _Surname) 
+            public Participant(string _Name, string _Surname) : base(_Name, _Surname)
             {
                 scores = new double[0];
                 count++;
@@ -77,7 +73,7 @@ namespace Lab_7
             {
                 if (result == 0 || result == 0.5 || result == 1)
                 {
-                    if(scores == null)
+                    if (scores == null)
                     {
                         scores = new double[0];
                     }
@@ -90,9 +86,9 @@ namespace Lab_7
                     scores[t.Length] = result;
                 }
             }
-            public override void Print()
+            public void Print()
             {
-                base.Print();
+                Console.Write($"{Name} {Surname}");
                 Console.WriteLine($" {TotalScore}");
             }
             public static void Sort(Participant[] array)
