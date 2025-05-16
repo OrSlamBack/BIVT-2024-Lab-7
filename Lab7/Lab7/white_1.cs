@@ -34,17 +34,24 @@ namespace Lab_7
                 club = _Club;
                 firstJump = 0;
                 secondJump = 0;
-                jumpers++;
             }
             public void Jump(double result)
             {
                 if (firstJump == 0)
                 {
+                    if(result  >= standard)
+                    {
+                        jumpers++;
+                    }
                     firstJump = result;
                 }
 
                 else if (secondJump == 0)
                 {
+                    if(result >= standard && firstJump < standard)
+                    {
+                        jumpers++;
+                    }
                     secondJump = result;
                 }
             }
