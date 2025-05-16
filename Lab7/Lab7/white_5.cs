@@ -42,13 +42,6 @@ namespace Lab_7
                 goals = _goals;
                 misses = _misses;
             }
-            public void Print()
-            {
-                Console.WriteLine();
-                Console.WriteLine($"Голов : {Goals}");
-                Console.WriteLine($"Пропущено : {Misses}");
-                Console.WriteLine($"Очков : {Score}");
-            }
         };
         public abstract class Team
         {
@@ -137,7 +130,7 @@ namespace Lab_7
                     }
                 }
             }
-            public virtual void Print()
+            public void Print()
             {
                 if (Name == null) return;
                 if(Matches == null) return;
