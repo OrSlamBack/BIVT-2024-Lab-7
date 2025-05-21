@@ -104,6 +104,17 @@ namespace Lab_7
                 }
                 Marks = (double[])other.Marks.Clone();
             }
+            public void Print()
+            {
+                if (Surname == null || Name == null) return;
+                Console.Write(Name);
+                Console.Write(" ");
+                Console.Write(Surname);
+                Console.Write(" ");
+                Console.Write(AvgMark);
+                Console.Write(" ");
+                Console.WriteLine(Skipped);
+            }
 
         };
         public class Undergraduate : Student
