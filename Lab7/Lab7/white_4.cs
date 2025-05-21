@@ -25,6 +25,10 @@ namespace Lab_7
                 surname = _Surname;
                 name = _Name;
             }
+            public void Print()
+            {
+                Console.Write($"{Name} {Surname}");
+            }
 
         }
         public class Participant : Human
