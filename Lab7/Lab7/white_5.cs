@@ -160,6 +160,16 @@ namespace Lab_7
                 }
                 base.PlayMatch(goals, misses);
             }
+            public void Print()
+            {
+                if (Name == null) return;
+                if (Matches == null) return;
+                Console.Write(Name);
+                Console.Write(" ");
+                Console.Write(TotalScore);
+                Console.Write(" ");
+                Console.WriteLine(TotalDifference);
+            }
         }
         public class WomanTeam : Team 
         {
@@ -212,6 +222,16 @@ namespace Lab_7
                     penalties[penalties.Length - 1] = misses-goals;
                 }
                 base.PlayMatch(goals, misses);
+            }
+            public void Print()
+            {
+                if (Name == null) return;
+                if (Matches == null) return;
+                Console.Write(Name);
+                Console.Write(" ");
+                Console.Write(TotalScore);
+                Console.Write(" ");
+                Console.WriteLine(TotalDifference);
             }
         }
     }
