@@ -95,7 +95,7 @@ namespace Lab_7
                 }
                 int n = 0;
                 for (int i = 0; i < participants.Length; i++) {
-                    if (participants[i].firstJump >= standard || participants[i].secondJump >= standard)
+                    if (participants[i].firstJump >= standard && participants[i].secondJump >= standard)
                     {
                         n++;
                     }
@@ -103,7 +103,7 @@ namespace Lab_7
                 Participant[] t = new Participant[n];
                 int j = 0;
                 for (int i = 0; i < participants.Length; ++i) {
-                    if (participants[i].firstJump >= standard || participants[i].secondJump >= standard)
+                    if (participants[i].firstJump >= standard && participants[i].secondJump >= standard)
                     {
                         t[j++] = participants[i];
                     }
