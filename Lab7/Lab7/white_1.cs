@@ -89,6 +89,7 @@ namespace Lab_7
             }
             public static void Disqualify(ref Participant[] participants)
             {
+                disqualified = 0;
                 if(participants == null)
                 {
                     return;
@@ -110,10 +111,10 @@ namespace Lab_7
                     else
                     {
                         disqualified++;
-                        jumpers--;
                     }
                 }
                 participants = t;
+                jumpers = participants.Length;
             }
         };
 
